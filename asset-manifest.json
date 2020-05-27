@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/scrum-hours/static/css/main.5f361e03.chunk.css",
-    "main.js": "/scrum-hours/static/js/main.35e8f580.chunk.js",
-    "main.js.map": "/scrum-hours/static/js/main.35e8f580.chunk.js.map",
+    "main.js": "/scrum-hours/static/js/main.93b646e5.chunk.js",
+    "main.js.map": "/scrum-hours/static/js/main.93b646e5.chunk.js.map",
     "runtime-main.js": "/scrum-hours/static/js/runtime-main.073bbae9.js",
     "runtime-main.js.map": "/scrum-hours/static/js/runtime-main.073bbae9.js.map",
     "static/js/2.766e727b.chunk.js": "/scrum-hours/static/js/2.766e727b.chunk.js",
     "static/js/2.766e727b.chunk.js.map": "/scrum-hours/static/js/2.766e727b.chunk.js.map",
     "index.html": "/scrum-hours/index.html",
-    "precache-manifest.f3f1c9e21382d095d4487616eb2a499e.js": "/scrum-hours/precache-manifest.f3f1c9e21382d095d4487616eb2a499e.js",
+    "precache-manifest.63cc30dc709acdc009e38e370f14cdf2.js": "/scrum-hours/precache-manifest.63cc30dc709acdc009e38e370f14cdf2.js",
     "service-worker.js": "/scrum-hours/service-worker.js",
     "static/css/main.5f361e03.chunk.css.map": "/scrum-hours/static/css/main.5f361e03.chunk.css.map",
     "static/js/2.766e727b.chunk.js.LICENSE.txt": "/scrum-hours/static/js/2.766e727b.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.073bbae9.js",
     "static/js/2.766e727b.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.35e8f580.chunk.js"
+    "static/js/main.93b646e5.chunk.js"
   ]
 }

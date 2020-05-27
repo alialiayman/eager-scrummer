@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a33df9164ed02f7b5a0a2880b54256c3",
+    "revision": "9eb28d1be965175bc042e0f2e66d02e3",
     "url": "/scrum-hours/index.html"
   },
   {
-    "revision": "ede6788ee7ca5277119c",
+    "revision": "63c84a6caf61139035c4",
     "url": "/scrum-hours/static/css/main.5f361e03.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/scrum-hours/static/js/2.766e727b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ede6788ee7ca5277119c",
-    "url": "/scrum-hours/static/js/main.35e8f580.chunk.js"
+    "revision": "63c84a6caf61139035c4",
+    "url": "/scrum-hours/static/js/main.93b646e5.chunk.js"
   },
   {
     "revision": "d8bf389dcc80eec9da3a",
