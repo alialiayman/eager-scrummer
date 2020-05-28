@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/scrum-hours/static/css/main.5f361e03.chunk.css",
-    "main.js": "/scrum-hours/static/js/main.7e72155d.chunk.js",
-    "main.js.map": "/scrum-hours/static/js/main.7e72155d.chunk.js.map",
+    "main.js": "/scrum-hours/static/js/main.ead41f83.chunk.js",
+    "main.js.map": "/scrum-hours/static/js/main.ead41f83.chunk.js.map",
     "runtime-main.js": "/scrum-hours/static/js/runtime-main.073bbae9.js",
     "runtime-main.js.map": "/scrum-hours/static/js/runtime-main.073bbae9.js.map",
-    "static/js/2.766e727b.chunk.js": "/scrum-hours/static/js/2.766e727b.chunk.js",
-    "static/js/2.766e727b.chunk.js.map": "/scrum-hours/static/js/2.766e727b.chunk.js.map",
+    "static/js/2.400c2099.chunk.js": "/scrum-hours/static/js/2.400c2099.chunk.js",
+    "static/js/2.400c2099.chunk.js.map": "/scrum-hours/static/js/2.400c2099.chunk.js.map",
     "index.html": "/scrum-hours/index.html",
-    "precache-manifest.2fdbeade8b9ba05beed68b3c4a370e6b.js": "/scrum-hours/precache-manifest.2fdbeade8b9ba05beed68b3c4a370e6b.js",
+    "precache-manifest.b67394b0c8a8227ef42d5262f5bc142d.js": "/scrum-hours/precache-manifest.b67394b0c8a8227ef42d5262f5bc142d.js",
     "service-worker.js": "/scrum-hours/service-worker.js",
     "static/css/main.5f361e03.chunk.css.map": "/scrum-hours/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.766e727b.chunk.js.LICENSE.txt": "/scrum-hours/static/js/2.766e727b.chunk.js.LICENSE.txt"
+    "static/js/2.400c2099.chunk.js.LICENSE.txt": "/scrum-hours/static/js/2.400c2099.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.073bbae9.js",
-    "static/js/2.766e727b.chunk.js",
+    "static/js/2.400c2099.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.7e72155d.chunk.js"
+    "static/js/main.ead41f83.chunk.js"
   ]
 }
