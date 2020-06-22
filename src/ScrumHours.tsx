@@ -199,13 +199,13 @@ const ScrumHours: React.FC = () => {
     }
 
     const handleOnCapacityChange = (e: any) => {
-        e.target.value = Math.max(0, parseInt(e.target.value) ).toString().slice(0,2)
+        e.target.value = Math.max(0, parseInt(e.target.value)).toString().slice(0, 2)
         setNewCapacity(e.target.value);
     }
     const handleCommitEdit = () => {
         setState(p => ({ ...p, capacity: newCapacity }));
         setEditCapacity(false);
-        localStorage.setItem('capacity',newCapacity.toString() );
+        localStorage.setItem('capacity', newCapacity.toString());
         calculatePage();
 
     }
@@ -261,19 +261,56 @@ const ScrumHours: React.FC = () => {
                             <CardContent>
                                 <Grid container xs={12} justify="space-between">
                                     <Grid item xs={2}>
-                                        <div>Morning</div>
-                                        <Brightness5Icon />
-                                        <div>{`To do ${state.toDo.morning} hrs`}</div>
-                                        <div>{`Actual ${state.actual.morning} hrs`}</div>
+                                        <Grid container spacing={1} justify="center" alignItems="center" style={{ backgroundColor: 'navy', color: 'yellow', borderRadius: '32px' , marginBottom: '10px'}}>
+                                            <Grid item>
+                                                <Brightness5Icon />
+                                            </Grid>
+                                            <Grid item>
+                                                Morning
+                                                </Grid>
+                                        </Grid>
+                                        <Grid container>
+                                            <Grid item xs={6}>
+                                                To Do
+                                            </Grid>
+                                            <Grid item xs={6}>
+                                                Actuals
+                                            </Grid>
+                                            <Grid item xs={6}>
+                                                {state.toDo.morning}
+                                            </Grid>
+                                            <Grid item xs={6}>
+                                                {state.actual.morning}
+                                            </Grid>
+                                        </Grid>
                                     </Grid>
                                     <Grid item xs={2} >
-                                        <div className={classes.eveningContainer}>Evening</div>
-                                        <Brightness3Icon />
-                                        <div>{`To do ${state.toDo.evening} hrs`}</div>
-                                        <div>{`Actual ${state.actual.evening} hrs`}</div>
+                                    <Grid container spacing={1} justify="center" alignItems="center" style={{ backgroundColor: 'black', color: 'white', borderRadius: '32px' , marginBottom: '10px'}}>
+                                            <Grid item>
+                                            <Brightness3Icon />
+
+                                            </Grid>
+                                            <Grid item>
+                                                Evening
+                                                </Grid>
+                                        </Grid>
+                                        <Grid container>
+                                            <Grid item xs={6}>
+                                                To Do
+                                            </Grid>
+                                            <Grid item xs={6}>
+                                                Actuals
+                                            </Grid>
+                                            <Grid item xs={6}>
+                                                {state.toDo.evening}
+                                            </Grid>
+                                            <Grid item xs={6}>
+                                                {state.actual.evening}
+                                            </Grid>
+                                        </Grid>
                                     </Grid>
                                 </Grid>
-                                <TextField label="Capacity" disabled={!editCapacity} style={{width: '150px'}}
+                                <TextField label="Capacity" disabled={!editCapacity} style={{ width: '150px' }}
                                     variant="standard"
                                     autoFocus
                                     size="small"
