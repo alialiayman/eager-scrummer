@@ -261,7 +261,7 @@ const ScrumHours: React.FC = () => {
                             <CardContent>
                                 <Grid container xs={12} justify="space-between">
                                     <Grid item xs={2}>
-                                        <Grid container spacing={1} justify="center" alignItems="center" style={{ backgroundColor: 'navy', color: 'yellow', borderRadius: '32px' , marginBottom: '10px'}}>
+                                        <Grid container spacing={1} justify="center" alignItems="center" style={{ backgroundColor: 'navy', color: 'yellow', borderRadius: '32px', marginBottom: '10px' }}>
                                             <Grid item>
                                                 <Brightness5Icon />
                                             </Grid>
@@ -285,9 +285,9 @@ const ScrumHours: React.FC = () => {
                                         </Grid>
                                     </Grid>
                                     <Grid item xs={2} >
-                                    <Grid container spacing={1} justify="center" alignItems="center" style={{ backgroundColor: 'black', color: 'white', borderRadius: '32px' , marginBottom: '10px'}}>
+                                        <Grid container spacing={1} justify="center" alignItems="center" style={{ backgroundColor: 'black', color: 'white', borderRadius: '32px', marginBottom: '10px' }}>
                                             <Grid item>
-                                            <Brightness3Icon />
+                                                <Brightness3Icon />
 
                                             </Grid>
                                             <Grid item>
@@ -342,9 +342,9 @@ const ScrumHours: React.FC = () => {
                     </Grid>
 
                 </Grid>
-                <Grid container justify="space-between" style={{ marginTop: '32px' }}>
-                    <Grid xs={3}>
-                        <Card>
+                <Grid container justify="space-between" style={{ marginTop: '32px', padding: '0.5rem' }} spacing={4}>
+                    <Grid xs={4}>
+                        <Card style={{ backgroundColor: 'hsl(0,100%,97%)', color: 'hsl(0,100%,40%' }}>
                             <CardContent>
 
 
@@ -438,91 +438,94 @@ const ScrumHours: React.FC = () => {
                         </Card>
                     </Grid>
 
-                    <Grid item xs={3}>
-                        <Card>
-                            <CardContent>
-                                <Grid>
+                    <Grid item xs={8}>
+                        <Grid container direction="column" spacing={1} justify="space-between" alignItems="stretch" style={{ height: '100%'}}>
 
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                        <TextField
-                                            label="Vacations"
-                                            type="date"
-                                            value={vacation}
-                                            onChange={(e) => setVacation(e.target.value)}
+                            <Card style={{ backgroundColor: 'hsl(120,100%,96%)', color: 'hsl(120,100%,20%' }}>
+                                <CardContent>
+                                    <Grid>
+
+                                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                            <TextField
+                                                label="Vacations"
+                                                type="date"
+                                                value={vacation}
+                                                onChange={(e) => setVacation(e.target.value)}
+                                                InputLabelProps={{
+                                                    shrink: true
+                                                }}
+                                            />
+                                            <Button color="secondary" onClick={handleAddVacation}>Add</Button>
+
+                                        </div>
+                                    </Grid>
+                                    <Grid>
+                                        {state.vacationDates.map(v => {
+                                            return (
+                                                <React.Fragment>
+                                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+
+                                                        <div>{moment(v).format('ddd DD MMM YYYY')}</div>
+                                                        <Button onClick={() => {
+                                                            return handleRemoveVacation(v);
+                                                        }}>X</Button>
+                                                    </div>
+                                                    <Divider></Divider>
+                                                </React.Fragment>
+                                            )
+                                        })}
+
+                                    </Grid>
+                                </CardContent>
+                            </Card>
+
+                            <Card style={{ backgroundColor: 'hsl(240,100%,96%)', color: 'hsl(240,100%,20%', marginTop: '0.5rem' }}>
+                                <CardContent>
+
+                                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                                        <TextField style={{ width: '90%' }}
+                                            label="Story"
+                                            type="text"
+                                            value={story.name}
+                                            onChange={(e) => setStory({ ...story, name: e.target.value })}
                                             InputLabelProps={{
                                                 shrink: true
                                             }}
                                         />
-                                        <Button color="secondary" onClick={handleAddVacation}>Add</Button>
-
+                                        <TextField
+                                            label="Points"
+                                            type="number"
+                                            value={story.points}
+                                            onChange={(e) => setStory({ ...story, points: parseInt(e.target.value) })}
+                                            defaultValue={1}
+                                            InputLabelProps={{
+                                                shrink: true
+                                            }}
+                                        />
+                                        <Button color="secondary" onClick={handleAddStory}>Add</Button>
                                     </div>
-                                </Grid>
-                                <Grid>
-                                    {state.vacationDates.map(v => {
-                                        return (
-                                            <React.Fragment>
-                                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                    <Grid>
+                                        {state.stories.map((s: any) => {
+                                            return (
+                                                <React.Fragment>
+                                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
 
-                                                    <div>{moment(v).format('ddd DD MMM YYYY')}</div>
-                                                    <Button onClick={() => {
-                                                        return handleRemoveVacation(v);
-                                                    }}>X</Button>
-                                                </div>
-                                                <Divider></Divider>
-                                            </React.Fragment>
-                                        )
-                                    })}
+                                                        <div>{`${s.points}   ${s.name}`}</div>
+                                                        <Button onClick={() => handleRemoveStory(s.name)}>X</Button>
+                                                    </div>
+                                                    <Divider></Divider>
+                                                </React.Fragment>
+                                            )
+                                        })}
 
-                                </Grid>
-                            </CardContent>
-                        </Card>
+                                    </Grid>
+                                </CardContent>
+                            </Card>
+
+                        </Grid>
+
                     </Grid>
 
-
-                    <Grid xs={5}>
-                        <Card>
-                            <CardContent>
-
-                                <div style={{ display: 'flex', alignItems: 'center' }}>
-                                    <TextField style={{ width: '90%' }}
-                                        label="Story"
-                                        type="text"
-                                        value={story.name}
-                                        onChange={(e) => setStory({ ...story, name: e.target.value })}
-                                        InputLabelProps={{
-                                            shrink: true
-                                        }}
-                                    />
-                                    <TextField
-                                        label="Points"
-                                        type="number"
-                                        value={story.points}
-                                        onChange={(e) => setStory({ ...story, points: parseInt(e.target.value) })}
-                                        defaultValue={1}
-                                        InputLabelProps={{
-                                            shrink: true
-                                        }}
-                                    />
-                                    <Button color="secondary" onClick={handleAddStory}>Add</Button>
-                                </div>
-                                <Grid>
-                                    {state.stories.map((s: any) => {
-                                        return (
-                                            <React.Fragment>
-                                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-
-                                                    <div>{`${s.points}   ${s.name}`}</div>
-                                                    <Button onClick={() => handleRemoveStory(s.name)}>X</Button>
-                                                </div>
-                                                <Divider></Divider>
-                                            </React.Fragment>
-                                        )
-                                    })}
-
-                                </Grid>
-                            </CardContent>
-                        </Card>
-                    </Grid>
                 </Grid>
             </Paper>
         </Container >
