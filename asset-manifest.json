@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/eager-scrummer/static/css/main.5f361e03.chunk.css",
-    "main.js": "/eager-scrummer/static/js/main.694c9eda.chunk.js",
-    "main.js.map": "/eager-scrummer/static/js/main.694c9eda.chunk.js.map",
+    "main.js": "/eager-scrummer/static/js/main.b3f9ef10.chunk.js",
+    "main.js.map": "/eager-scrummer/static/js/main.b3f9ef10.chunk.js.map",
     "runtime-main.js": "/eager-scrummer/static/js/runtime-main.2da2edfd.js",
     "runtime-main.js.map": "/eager-scrummer/static/js/runtime-main.2da2edfd.js.map",
     "static/js/2.49710ec8.chunk.js": "/eager-scrummer/static/js/2.49710ec8.chunk.js",
     "static/js/2.49710ec8.chunk.js.map": "/eager-scrummer/static/js/2.49710ec8.chunk.js.map",
     "index.html": "/eager-scrummer/index.html",
-    "precache-manifest.2453ea540bb90e7ff936ee6b3f7e722f.js": "/eager-scrummer/precache-manifest.2453ea540bb90e7ff936ee6b3f7e722f.js",
+    "precache-manifest.1c059ca6ad81368eaed5d5240a51b2aa.js": "/eager-scrummer/precache-manifest.1c059ca6ad81368eaed5d5240a51b2aa.js",
     "service-worker.js": "/eager-scrummer/service-worker.js",
     "static/css/main.5f361e03.chunk.css.map": "/eager-scrummer/static/css/main.5f361e03.chunk.css.map",
     "static/js/2.49710ec8.chunk.js.LICENSE.txt": "/eager-scrummer/static/js/2.49710ec8.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.2da2edfd.js",
     "static/js/2.49710ec8.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.694c9eda.chunk.js"
+    "static/js/main.b3f9ef10.chunk.js"
   ]
 }

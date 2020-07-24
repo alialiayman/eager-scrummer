@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d1b3642301504cd03407e8d32564aa80",
+    "revision": "a85e6cb144dc536219ec0e23f63b1a1d",
     "url": "/eager-scrummer/index.html"
   },
   {
-    "revision": "83b1fbdbb023e5b685a4",
+    "revision": "2c84a242e03c78e33ab4",
     "url": "/eager-scrummer/static/css/main.5f361e03.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/eager-scrummer/static/js/2.49710ec8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "83b1fbdbb023e5b685a4",
-    "url": "/eager-scrummer/static/js/main.694c9eda.chunk.js"
+    "revision": "2c84a242e03c78e33ab4",
+    "url": "/eager-scrummer/static/js/main.b3f9ef10.chunk.js"
   },
   {
     "revision": "1ea59b756264a2a496ce",
