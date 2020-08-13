@@ -9,6 +9,8 @@ import CreateOutlinedIcon from '@material-ui/icons/CreateOutlined';
 import DoneOutlinedIcon from '@material-ui/icons/DoneOutlined';
 import moment from 'moment';
 
+
+
 const useStyles = makeStyles((theme: Theme) => ({
     mainContainer: {
         width: '100%',
@@ -74,6 +76,22 @@ const ScrumHours: React.FC = () => {
 
     useEffect(() => calculatePage(), [todayDate]);
 
+    const addBusinessDays = (originalDate: any, numDaysToAdd: number) => {
+        const Sunday = 0;
+        const Saturday = 6;
+        let daysRemaining = numDaysToAdd;
+      
+        const newDate = moment(originalDate);
+      
+        while (daysRemaining > 0) {
+          newDate.add(1, 'days');
+          if (newDate.day() !== Sunday && newDate.day() !== Saturday) {
+            daysRemaining--;
+          }
+        }
+      
+        return newDate.format('dddd MMM Do');
+      }
 
     const calculatePage = () => {
         const vacationsString = localStorage.getItem('vacations');
@@ -343,92 +361,63 @@ const ScrumHours: React.FC = () => {
 
                 </Grid>
                 <Grid container justify="space-between" style={{ marginTop: '32px', padding: '0.5rem' }} spacing={4}>
-                    <Grid xs={4}>
+                    <Grid xs={7}>
                         <Card style={{ backgroundColor: 'hsl(0,100%,97%)', color: 'hsl(0,100%,40%' }}>
                             <CardContent>
-
 
                                 <TableContainer>
                                     <Table size="small">
                                         <TableHead>
                                             <TableRow>
-                                                <TableCell>
-                                                    Points
-            </TableCell>
-                                                <TableCell>
-                                                    Hours
-            </TableCell>
-                                                <TableCell>
-                                                    ~Days
-            </TableCell>
+                                                <TableCell>Points</TableCell>
+                                                <TableCell>Hours</TableCell>
+                                                <TableCell>~Days</TableCell>
+                                                <TableCell>Pts[Start]</TableCell>
+                                                <TableCell>Pts[Now]</TableCell>
                                             </TableRow>
                                         </TableHead>
                                         <TableBody>
                                             <TableRow>
-                                                <TableCell>
-                                                    1
-                </TableCell>
-                                                <TableCell>
-                                                    0-8
-                </TableCell>
-                                                <TableCell>
-                                                    1
-                </TableCell>
+                                                <TableCell>1</TableCell>
+                                                <TableCell>0-8</TableCell>
+                                                <TableCell>1</TableCell>
+                                                <TableCell>{addBusinessDays(state.sprintStartDate,1)}</TableCell>
+                                                <TableCell>{addBusinessDays(moment(),1)}</TableCell>
                                             </TableRow>
                                             <TableRow>
-                                                <TableCell>
-                                                    2
-                </TableCell>
-                                                <TableCell>
-                                                    8-20
-                </TableCell>
-                                                <TableCell>
-                                                    3
-                </TableCell>
+                                                <TableCell>2</TableCell>
+                                                <TableCell>8-20</TableCell>
+                                                <TableCell>3</TableCell>
+                                                <TableCell>{addBusinessDays(state.sprintStartDate,3)}</TableCell>
+                                                <TableCell>{addBusinessDays(moment(),3)}</TableCell>
                                             </TableRow>
                                             <TableRow>
-                                                <TableCell>
-                                                    3
-                </TableCell>
-                                                <TableCell>
-                                                    18-35
-                </TableCell>
-                                                <TableCell>
-                                                    6
-                </TableCell>
+                                                <TableCell>3</TableCell>
+                                                <TableCell>18-35</TableCell>
+                                                <TableCell>6</TableCell>
+                                                <TableCell>{addBusinessDays(state.sprintStartDate,6)}</TableCell>
+                                                <TableCell>{addBusinessDays(moment(),6)}</TableCell>
                                             </TableRow>
                                             <TableRow>
-                                                <TableCell>
-                                                    5
-                </TableCell>
-                                                <TableCell>
-                                                    30-55
-                </TableCell>
-                                                <TableCell>
-                                                    9
-                </TableCell>
+                                                <TableCell>5</TableCell>
+                                                <TableCell>30-55</TableCell>
+                                                <TableCell>9</TableCell>
+                                                <TableCell>{addBusinessDays(state.sprintStartDate,9)}</TableCell>
+                                                <TableCell>{addBusinessDays(moment(),9)}</TableCell>
                                             </TableRow>
                                             <TableRow>
-                                                <TableCell>
-                                                    8
-                </TableCell>
-                                                <TableCell>
-                                                    50-85
-                </TableCell>
-                                                <TableCell>
-                                                    14(1.5S)
-                </TableCell>
+                                                <TableCell>8</TableCell>
+                                                <TableCell>50-85</TableCell>
+                                                <TableCell>14(1.5S)</TableCell>
+                                                <TableCell>{addBusinessDays(state.sprintStartDate,14)}</TableCell>
+                                                <TableCell>{addBusinessDays(moment(),14)}</TableCell>
                                             </TableRow>
                                             <TableRow>
-                                                <TableCell>
-                                                    13
-                </TableCell>
-                                                <TableCell>
-                                                    > 85
-                </TableCell>
-                                                <TableCell>
-                                                    >1.5S
-                </TableCell>
+                                                <TableCell>13</TableCell>
+                                                <TableCell>85+</TableCell>
+                                                <TableCell>1.5S+</TableCell>
+                                                <TableCell>{addBusinessDays(state.sprintStartDate,14)}</TableCell>
+                                                <TableCell>{addBusinessDays(moment(),14)}</TableCell>
                                             </TableRow>
                                         </TableBody>
                                     </Table>
@@ -438,7 +427,7 @@ const ScrumHours: React.FC = () => {
                         </Card>
                     </Grid>
 
-                    <Grid item xs={8}>
+                    <Grid item xs={5}>
                         <Grid container direction="column" spacing={1} justify="space-between" alignItems="stretch" style={{ height: '100%'}}>
 
                             <Card style={{ backgroundColor: 'hsl(120,100%,96%)', color: 'hsl(120,100%,20%' }}>
