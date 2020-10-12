@@ -89,9 +89,9 @@ const ScrumHours: React.FC = () => {
   const [editCapacity, setEditCapacity] = useState(false);
   const [newCapacity, setNewCapacity] = useState(state.capacity);
   const knownSprint = {
-    startDate: moment("04/01/2020", "MM/DD/YYYY"),
-    endDate: moment("04/14/2020", "MM/DD/YYYY"),
-    sprintNumber: 7,
+    startDate: moment("09/25/2020", "MM/DD/YYYY"),
+    endDate: moment("10/09/2020", "MM/DD/YYYY"),
+    sprintNumber: 1,
   };
 
   const addBusinessDays = (originalDate: any, numDaysToAdd: number) => {
@@ -314,9 +314,11 @@ const ScrumHours: React.FC = () => {
               <CardHeader
                 title={`Sprint ${
                   state.sprintNumber
-                }, ${state.sprintStartDate.format(
+                }, ${state.sprintStartDate.day() > 5 ? state.sprintStartDate.add('days',8-state.sprintStartDate.day()).format(
                   "dddd MMMM Do YYYY"
-                )}-${state.sprintEndDate.format("dddd MMMM Do YYYY")} [${
+                ):state.sprintStartDate.format(
+                  "dddd MMMM Do YYYY"
+                )}-${state.sprintEndDate.day()> 5 ? state.sprintEndDate.add('days', -1 * (state.sprintEndDate.day()- 5)).format("dddd MMMM Do YYYY") : state.sprintEndDate.format("dddd MMMM Do YYYY")} [${
                   state.sprintLengthBusiness
                 } Business days]`}
                 subheader={`Day: ${state.sprintDay}, Remaining: ${state.remainingDays}`}
