@@ -89,8 +89,8 @@ const ScrumHours: React.FC = () => {
   const [editCapacity, setEditCapacity] = useState(false);
   const [newCapacity, setNewCapacity] = useState(state.capacity);
   const knownSprint = {
-    startDate: moment("09/25/2020", "MM/DD/YYYY"),
-    endDate: moment("10/09/2020", "MM/DD/YYYY"),
+    startDate: moment("02/17/2021", "MM/DD/YYYY"),
+    endDate: moment("03/03/2021", "MM/DD/YYYY"),
     sprintNumber: 1,
   };
 
